@@ -1,5 +1,5 @@
 
 credenciais = {
-    "login": "253332",
-    "pass": "rOSEu2325"
+    "login": "coloque aqui seu login",
+    "pass": "coloque aqui sua senha"
 }
