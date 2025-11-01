@@ -57,6 +57,7 @@ def criar_sessao():
 
 
 # FAZ A REQUISIÇÃO HTML E DEVOLVE A RESPOSTA DO SERVIDOR
+# NÃO ESTÁ FUNCIONANDO DIREITO ESSA PARTE, NÃO CONSEGUE REAUTENTICAR
 def executar_request(session, url):
     response = session.get(url)
     if response.status_code != 200:
@@ -80,12 +81,13 @@ matricula_professor = '0'  # também não precisa para a query
 #periodos_id_list = ['1']
 
 
-#Criando a lista de turmas e de componentes
+#Criando a lista de turmas e de componentes, para isso funiconar é preciso já ter rodado uma versão mais antiga do código e já ter 
+#os arquivos de turma e matérias.
 
 #df_turmas = pd.read_csv('turmas.csv')
 #df_materias = pd.read_csv('materias.csv')
 
-# Filtra as linhas conforme as condições
+# Filtra as linhas conforme as condições, CÓDIGO VELHO USANDO PARA PEGAR OS DADOS DIRETAMENTE DO DIÁRIO DOS PROFESSORES
 #filtro = (df_turmas['anoLetivo'] == 2025) & (df_turmas['codigoComponente'] == 0) 
 
 # Extrai os ids das turmas que cumprem esses critérios
@@ -95,11 +97,12 @@ matricula_professor = '0'  # também não precisa para a query
 #periodos_id_list =['3']
 
 # CAMINHO BÁSICO DAS URLS QUE SERÃO UTILIZADAS NAS REQUISIÇÕES
+# Código antigo , agora o caminho e as as urls são outras
 #url_base_filtro_cre = "https://educadf.se.df.gov.br/educadffiltrocreapi/api/FiltroCre"
 #url_base_diario = "https://educadf.se.df.gov.br/educadfdiarioapi/api"
 #params_data_quadro_aula = formatar_data_params(data_quadro_aula)
 
-
+# novo caminho das url's
 #url_base_menu = "https://educadf.se.df.gov.br/educadfperfilapi/api/Menu"
 url_GetAll = "https://educadf.se.df.gov.br/comumapi/api/redeensino/GetAll"
 url_GetByUsuarioLogadoKeyClo = "https://educadf.se.df.gov.br/comumapi/api/perfil/GetByUsuarioLogadoKeyCloak"
@@ -171,7 +174,7 @@ df_GetSerie.to_csv(f'{pasta}/GetSerie.csv', encoding='utf-8', index=False)
 df_GetTurma.to_csv(f'{pasta}/GetTurma.csv', encoding='utf-8', index=False)
 df_GetByFilter.to_csv(f'{pasta}/GetByFilter.csv', encoding='utf-8', index=False)
 
-
+# consegui pegar um arquivo e verificar o arquivo que queria do 1A 3º bim, agora tem que fazer o loop
 
 
 
