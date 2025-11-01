@@ -1,0 +1,30 @@
+relatório de pontos
+https://educadf.se.df.gov.br/matricula/modulos/diario-classe/relatorio-de-pontos
+
+
+pontos acumulados
+https://educadf.se.df.gov.br/comumapi/api/UnidadeEscolar/GetUnidadeEscolarByRedeEnsinoERegionalEnsinoELotacao/?idRedeEnsino=1&idRegionalEnsino=10104
+
+escolhendo regional 
+
+https://educadf.se.df.gov.br/matriculaapi/api/RelatorioPontosAcumulados/GetTipoEnsinoPorUnidadeEscolar?idUnidadeEscolar=4062
+
+escolhendo tipo de ensino
+
+https://educadf.se.df.gov.br/matriculaapi/api/RelatorioPontosAcumulados/GetSerieByAnoLetivoEscola?anoLetivo=2025&idEscola=4062&cargoUsuarioLogado=TECNICO09
+
+
+Escolhendo o ano 1 séries
+
+
+https://educadf.se.df.gov.br/matriculaapi/api/RelatorioPontosAcumulados/GetTurmaByAnoLetivoEscolaSerie?anoLetivo=2025&idEscola=4062&idSerie=82&cargoUsuarioLogado=TECNICO09
+
+
+filtrando a turma
+
+https://educadf.se.df.gov.br/matriculaapi/api/RelatorioPontosAcumulados/getByFilter?filter=%7B%22next%22%3A%2250%22%2C%22offset%22%3A%220%22%2C%22column%22%3A%22%22%2C%22direction%22%3A%22%22%2C%22searchTerm%22%3A%22%22%2C%22cargo%22%3A%22TECNICO09%22%2C%22codEscola%22%3A4062%2C%22anoLetivo%22%3A2025%2C%22tipoEnsinoId%22%3A10%2C%22serieId%22%3A82%2C%22turmaId%22%3A5031444%2C%22bimestreId%22%3A3%7D
+
+
+botão para baixar o relatório csv
+
+/html/body/app-root/app-layout/app-vertical/div/div/div/div/app-relatorio-de-pontos/div/div/div/div[3]/app-relatorio-pontos-acumulados/div/div/div/div[2]/div/div/div/app-csv-export/button
